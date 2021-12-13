@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+  function validation () {
+let a = document.fomrs ["form"]["email"].value ;
+
+if (a == "")
+{
+  alert ("Email must be filled out !");
+  return false ;
+
+}
+  }
+
+  
+function myFunction() {
+    document.getElementById("demo").innerHTML = "<textarea cols = '50' rows = '20' name='text' id='text_id' class='form-control' style='resize:vertical' ></textarea>";
+}
+
+</script>
+
+<body> 
+   <form name= "form" action="https://formspree.io/f/xzbobglp" method="POST">
+      <div>
+        <label>Name</label>
+        <input type="text" id="username" name="username" >
+      </div> 
+      
+      <div>
+         <label>Email</label>
+        <input type="text" id="email" name="email"  >
+      </div>
+      
+
+        <div>
+            <label>Address</label>
+       <input type="text" id="Address" name="Address">
+        </div>
+       
+        <div>
+            <label>City</label>
+            <input type="text" id="City" name="City" >
+        </div>
+     
+        <div>
+            <label>Postal_code</label>
+       <input type="text" id="Postal code" name="Postal code" pattern="[A-Z0-9]{6}" >
+        </div>
+
+      <input type="submit">
+     
+        <p>Please select any option from below!</p>
+        <input type="radio" id="Question" name="Question" value="Question" onclick="myFunction()">Click here>
+        <label for="Question">Question</label><br>
+
+        <input type="radio" id="Comment" name="Comment" value="Comment">
+        <label for="Comment">Comment</label><br>
+         
+        <input type="radio" id="Hiring" name="Hiring" value="Hiring">
+        <label for="Hiring">Hiring</label><br>
+ 
+ 
+        
+
+   </form>
+
+</body>
+</html>
